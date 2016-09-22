@@ -8,8 +8,24 @@
 #define WELCOME "Welcome to the Snake game, please input:"
 #define INPUT_TIP "Input error, please input integer number among 1-5!"
 
+void showGame(int gameLevel, int snakeLength);
 void confirmExit(void);
 void menu(void);
+void newGame(void);
+
+/*
+** use 
+*/
+typedef struct snakeXY{
+    int x;
+    int y;
+    struct snakeXY *next;
+} snakeXY;
+
+
+int snakeLength = 5;
+int alive = 1;
+int gameLevel = 0;
 
 int main()
 {
@@ -78,6 +94,12 @@ void menu(void)
     }
 }
 
+void newGame(void)
+{
+    gameLevel = 0;
+    snakeLength = 5;
+    showGame(gameLevel, snakeLength);
+}
 
 void confirmExit(void)
 {
