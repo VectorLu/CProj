@@ -8,13 +8,14 @@
 #define WELCOME "Welcome to the Snake game, please input:"
 #define INPUT_TIP "Input error, please input integer number among 1-5!"
 
+
 void showGame(int gameLevel, int snakeLength);
 void confirmExit(void);
 void menu(void);
 void newGame(void);
 
 /*
-** use 
+** use snakeXY()
 */
 typedef struct snakeXY{
     int x;
@@ -22,6 +23,15 @@ typedef struct snakeXY{
     struct snakeXY *next;
 } snakeXY;
 
+typedef struct rankRecord{
+    int ranking;
+    /*
+    ** Don't use char *, just use array,
+    ** no need to malloc and free
+    */
+    char playerName[20];
+    int scores;
+}
 
 int snakeLength = 5;
 int alive = 1;
