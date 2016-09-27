@@ -97,16 +97,16 @@ void chooseLevel(void)
 }
 
 //TODO showRank() and the file operations
+//TODO C - relative path
 void showRank(void)
 {
-    FILE *
+    //TODO FILE *readFile = fopen("./")
 }
 
 void confirmExit(void)
 {
     char input = n;
     printf("Input \"y\" to confirm to exit.\n");
-
     printf("Or input \"n\" to return the menu.\n");
     scanf("%c", &input);
     if (input == 'y')
@@ -117,5 +117,4 @@ void confirmExit(void)
     {
         menu();
     }
-    return;
 }

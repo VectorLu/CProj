@@ -1,28 +1,43 @@
 #ifndef _snakeGame_H_
-#define  _snakeGame_H_
+#define _snakeGame_H_
 
+#include <conio.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 
 
-
-void showGame(int *gameRecord);
-void confirmExit(void);
-
 int *getRecord(FILE *recordFile);
+void showGame(int *gameRecord);
 
-/*
-** use snakeXY()
-*/
-typedef struct snakeXY{
+
+typedef struct CoordinateTag{
     int x;
     int y;
-    struct snakeXY *next;
-} snakeXY;
+} Coordinate;
 
-typedef struct rankRecord{
+
+/*
+** Using array to implement snake is easy,
+** but I wanna use linked list to practice
+** the operations of this data structure
+** and to implement a dynamic snake :)
+*/
+typedef struct SnakeXYTag{
+    Coordinate coordinate;
+    snakeXYTag *next;
+} SnakeXY;
+typedef struct SnakeTag{
+    SnakeXY *head;
+    SnakeXY *tail;
+    int alive;
+    int length;
+    int level;  /*speed*/
+    char name[20];
+} Snake;
+
+typedef struct RankTag{
     int ranking;
     /*
     ** Don't use char *, just use array,
@@ -30,10 +45,7 @@ typedef struct rankRecord{
     */
     char playerName[20];
     int scores;
-}
+} Rank;
 
-int snakeLength = 5;
-int alive = 1;
-int gameLevel = 0;
 
 #endif
