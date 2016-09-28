@@ -95,9 +95,13 @@ Coordinate produceStuff(const Snake *snake);
 int monitorKeyboard(Coordinate *direction);
 void changeDirection(Snake *snake, const Coordinate *direction);
 
+/*
+** TODO When the stdin get a 'q',
+** to save the snake and to menu()
+*/
 int saveRecord(Snake *snake);
 //TODO getRecord file?
-Snake *getRecord(FILE *recordFile);
+Snake *getRecord(FILE *snakeRecord);
 
 void showSnake(const SnakeXY *head);
 

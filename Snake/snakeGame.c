@@ -9,7 +9,7 @@ void gotoxy(int x, int y)
     COORD position;
     position.X = 2*x;
     position.Y = y;
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),place);
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), position);
     return;
 }
 
@@ -27,18 +27,23 @@ void continueGame(void)
 {
     //TODO implement of getRecord
     //TODO recordFile declare as a global file pointer
-    Snake *ctnSnake = getRecord(recordFile);
+    FILE *snakeRecord = fopen("snakeRecord.log", "r");
+    if (snakeRecord == NULL)
+    {
+        
+    }
+    Snake *ctnSnake = getRecord(snakeRecord);
     showGame(ctnSnake);
 }
 
 void chooseLevel(void)
 {
+    Snake *chooseSnake;
+    int gameLevel = 1;
     scanf("%d", &gameLevel);
-    gameLevel--;
-    snakeLength = 5 + 10*gameLevel;
-    gameRecord[0] = gameLevel;
-    gameRecord[1] = snakeLength;
-    showGame(gameRecord);
+    chooseSnake.level = gameLevel - 1;
+    chooseSnake.length = 5 + 10*gameLevel;
+    showGame(chooseSnake);
 }
 
 //TODO showRank() and the file operations
