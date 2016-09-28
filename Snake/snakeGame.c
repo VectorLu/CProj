@@ -30,10 +30,29 @@ void continueGame(void)
     FILE *snakeRecord = fopen("snakeRecord.log", "r");
     if (snakeRecord == NULL)
     {
-        
+        // TODO locate the cursor
+        printf("There is no record.\n");
+        printf("Input n to begin a new game, or q to go back to the menu.");
+        char choose;
+        scanf("%c", &choose);
+        switch (choose)
+        {
+            case 'n':
+                newGame();
+                break;
+            case 'q':
+                menu();
+                break;
+            default:
+                menu();
+        }
     }
-    Snake *ctnSnake = getRecord(snakeRecord);
-    showGame(ctnSnake);
+    else
+    {
+        Snake *ctnSnake = getRecord(snakeRecord);
+        showGame(ctnSnake);
+    }
+    return;
 }
 
 void chooseLevel(void)
