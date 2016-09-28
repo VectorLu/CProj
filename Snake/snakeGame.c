@@ -1,5 +1,9 @@
 #include "snakeGame.h"
 
+/*
+** The cmd interface x = y/2
+** need to adjust.
+*/
 void gotoxy(int x, int y)
 {
     COORD position;
@@ -23,8 +27,8 @@ void continueGame(void)
 {
     //TODO implement of getRecord
     //TODO recordFile declare as a global file pointer
-    gameRecord = getRecord(recordFile);
-    showGame(gameRecord);
+    Snake *ctnSnake = getRecord(recordFile);
+    showGame(ctnSnake);
 }
 
 void chooseLevel(void)

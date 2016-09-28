@@ -88,11 +88,16 @@ void autoGo(Snake *snake);
 
 int eatFood(const Snake *snake);
 void addSnakeTail(Snake *snake);
+int changeLevel(Snake *snake);
+
+Coordinate produceStuff(const Snake *snake);
 
 int monitorKeyboard(Coordinate *direction);
 void changeDirection(Snake *snake, const Coordinate *direction);
 
-int saveSnake(Snake *snake);
+int saveRecord(Snake *snake);
+//TODO getRecord file?
+Snake *getRecord(FILE *recordFile);
 
 void showSnake(const SnakeXY *head);
 
