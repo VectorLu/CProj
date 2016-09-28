@@ -9,15 +9,7 @@
 #define WELCOME "Welcome to the Snake game, please input:"
 #define INPUT_TIP "Input error, please input integer number among 1-5!"
 
-#define RECORD_SIZE 10
-int gameRecord[RECORD_SIZE];
-
 void menu(void);
-void newGame(void);
-void continueGame(void);
-void chooseLevel(void);
-void showRank(void);
-void confirmExit(void);
 
 int main()
 {
@@ -66,55 +58,5 @@ void menu(void)
     {
         //TODO locate the cursor
         printf("%s\n", INPUT_TIP);
-    }
-}
-
-void newGame(void)
-{
-    gameLevel = 0;
-    snakeLength = 5;
-    gameRecord[0] = gameLevel;
-    gameRecord[1] = snakeLength;
-    showGame(gameRecord);
-}
-
-void continueGame(void)
-{
-    //TODO implement of getRecord
-    //TODO recordFile declare as a global file pointer
-    gameRecord = getRecord(recordFile);
-    showGame(gameRecord);
-}
-
-void chooseLevel(void)
-{
-    scanf("%d", &gameLevel);
-    gameLevel--;
-    snakeLength = 5 + 10*gameLevel;
-    gameRecord[0] = gameLevel;
-    gameRecord[1] = snakeLength;
-    showGame(gameRecord);
-}
-
-//TODO showRank() and the file operations
-//TODO C - relative path
-void showRank(void)
-{
-    //TODO FILE *readFile = fopen("./")
-}
-
-void confirmExit(void)
-{
-    char input = n;
-    printf("Input \"y\" to confirm to exit.\n");
-    printf("Or input \"n\" to return the menu.\n");
-    scanf("%c", &input);
-    if (input == 'y')
-    {
-        exit(0);
-    }
-    else
-    {
-        menu();
     }
 }
