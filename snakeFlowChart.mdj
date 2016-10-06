@@ -182,7 +182,7 @@
 									"containerExtending": false,
 									"left": 456,
 									"top": 265,
-									"width": 44.7890625,
+									"width": 44,
 									"height": 13,
 									"autoResize": false,
 									"alpha": 1.6041168949077018,
@@ -303,7 +303,7 @@
 									"containerExtending": false,
 									"left": 107,
 									"top": 304,
-									"width": 33.22998046875,
+									"width": 33,
 									"height": 13,
 									"autoResize": false,
 									"alpha": 1.8669113472386925,
@@ -764,7 +764,7 @@
 									"containerExtending": false,
 									"left": 333,
 									"top": 351,
-									"width": 33.22998046875,
+									"width": 33,
 									"height": 13,
 									"autoResize": false,
 									"alpha": -0.47501087246912554,
@@ -830,7 +830,7 @@
 									"containerExtending": false,
 									"left": 455,
 									"top": 392,
-									"width": 33.22998046875,
+									"width": 33,
 									"height": 13,
 									"autoResize": false,
 									"alpha": 1.042721747215631,
@@ -896,7 +896,7 @@
 									"containerExtending": false,
 									"left": 540,
 									"top": 360,
-									"width": 33.22998046875,
+									"width": 33,
 									"height": 13,
 									"autoResize": false,
 									"alpha": 0.8760577227294305,
@@ -960,15 +960,9 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-<<<<<<< HEAD
-									"left": 680,
-									"top": 303,
-									"width": 33.22998046875,
-=======
 									"left": 679,
 									"top": 311,
 									"width": 33,
->>>>>>> origin/master
 									"height": 13,
 									"autoResize": false,
 									"alpha": -1.9936503964829504,
@@ -4370,6 +4364,61 @@
 							"nameLabel": {
 								"$ref": "AAAAAAFXQb0quKUx4Z8="
 							}
+						},
+						{
+							"_type": "FCDecisionView",
+							"_id": "AAAAAAFXcR9ZuEaym/I=",
+							"_parent": {
+								"$ref": "AAAAAAFXPAeiQ5+O2/Q="
+							},
+							"model": {
+								"$ref": "AAAAAAFXcR9ZpUawtYY="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAFXcR9ZvEazN5w=",
+									"_parent": {
+										"$ref": "AAAAAAFXcR9ZuEaym/I="
+									},
+									"visible": true,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffffff",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": false,
+									"containerExtending": false,
+									"left": 960,
+									"top": 1000,
+									"width": 144,
+									"height": 16,
+									"autoResize": false,
+									"underline": false,
+									"text": "蛇的长度增长是否超过10",
+									"horizontalAlignment": 2,
+									"verticalAlignment": 5
+								}
+							],
+							"visible": true,
+							"enabled": true,
+							"lineColor": "#000000",
+							"fillColor": "#ffffff",
+							"fontColor": "#000000",
+							"font": "Arial;13;0",
+							"showShadow": true,
+							"containerChangeable": false,
+							"containerExtending": false,
+							"left": 888,
+							"top": 992,
+							"width": 288,
+							"height": 32,
+							"autoResize": false,
+							"nameLabel": {
+								"$ref": "AAAAAAFXcR9ZvEazN5w="
+							},
+							"wordWrap": true
 						}
 					]
 				},
@@ -5215,6 +5264,14 @@
 						"$ref": "AAAAAAFXPAeiQp+NhjI="
 					},
 					"name": "保持原方向前进"
+				},
+				{
+					"_type": "FCDecision",
+					"_id": "AAAAAAFXcR9ZpUawtYY=",
+					"_parent": {
+						"$ref": "AAAAAAFXPAeiQp+NhjI="
+					},
+					"name": "蛇的长度增长是否超过10"
 				}
 			]
 		}
